@@ -10,6 +10,7 @@ endif
 
 set encoding=utf-8
 set smartindent
+set number
 "set title
 set expandtab
 set tabstop=4
