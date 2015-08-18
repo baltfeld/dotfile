@@ -1,18 +1,9 @@
-set nocompatible               " be iMproved
+set nocompatible
 filetype off
 
-
-" if has('vim_starting')
-" set runtimepath+=~/.vim/bundle/neobundle.vim
-" call neobundle#rc(expand('~/.vim/bundle/'))
-" endif
-" originalrepos on github
-" NeoBundle 'scrooloose/nerdtree'
-" NeoBundle 'https://bitbucket.org/kovisoft/slimv'
-
-filetype plugin indent on     " required!
+filetype plugin indent on
 filetype indent on
-:syntax on
+syntax on
 set foldmethod=syntax
 set foldlevel=100
 set t_Co=256
@@ -26,9 +17,6 @@ set showcmd
 set title
 "常にステータス行を表示
 set laststatus=2
-
-"if(){}などのインデント
-set cindent
 
 "ルーラーを表示
 set ruler
@@ -48,19 +36,17 @@ set history=256
 set smartindent
 set smarttab
 
-set tabstop=4
 "タブを空白に置き換える
-"set expandtab
-"set softtabstop=4
-"set shiftwidth=4
+set expandtab
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
 set backspace=indent,eol,start
 set wildmenu wildmode=list:longest,full
 
 " insertモードから抜ける
 inoremap <silent> jj <ESC>
 inoremap <silent> <C-j> j
-"inoremap <silent> kk <ESC>
-"inoremap <silent> <C-k> k
 
 " 行頭・行末移動方向をキーの相対位置にあわせる
 nnoremap 0 $ 
@@ -85,6 +71,7 @@ autocmd ColorScheme * highlight LineNr ctermfg=231 guifg=#cccccc
 autocmd ColorScheme * highlight Comment ctermfg=9 guifg=#cccc66
 ":colorscheme hybrid
 ":colorscheme molokai
-:colorscheme jellybeans
+colorscheme jellybeans
 
-:set nobackup
+set nobackup
+set mouse=c
