@@ -1,59 +1,90 @@
+set nocompatible               " be iMproved
+filetype off
+
+
+" if has('vim_starting')
+" set runtimepath+=~/.vim/bundle/neobundle.vim
+" call neobundle#rc(expand('~/.vim/bundle/'))
+" endif
+" originalrepos on github
+" NeoBundle 'scrooloose/nerdtree'
+" NeoBundle 'https://bitbucket.org/kovisoft/slimv'
+
+filetype plugin indent on     " required!
+filetype indent on
 :syntax on
-:colorscheme hybrid
-
-" set returncode
-set fileformats=unix,dos,mac
-
-if exists('&ambiwidth')
-  set ambiwidth=double
-endif
-
-set encoding=utf-8
-set smartindent
+set foldmethod=syntax
+set foldlevel=100
+set t_Co=256
+"行番号を非表示
 set number
-"set title
-set expandtab
+"括弧入力時に対応する括弧を表示
+set showmatch
+"コマンドをステータス行に表示
+set showcmd
+"タイトルを表示
+set title
+"常にステータス行を表示
+set laststatus=2
+
+"if(){}などのインデント
+set cindent
+
+"ルーラーを表示
+set ruler
+set ignorecase
+
+"検索に大文字を含んでいたら大小区別
+set smartcase
+"検索時にヒット部位の色を変更
+set hlsearch
+"検索時にインクリメンタルサーチを行う
+set incsearch
+set showmode
+
+"コマンドラインの履歴の保存数
+set history=256
+"インデント
+set smartindent
+set smarttab
+
 set tabstop=4
-"set list
-set shiftwidth=4
-"set smarttab
-set autoindent
-au FileType php setlocal makeprg=php\ -l\ %
-au FileType php setlocal errorformat=%m\ in\ %f\ on\ line\%l
+"タブを空白に置き換える
+"set expandtab
+"set softtabstop=4
+"set shiftwidth=4
+set backspace=indent,eol,start
+set wildmenu wildmode=list:longest,full
 
-let php_parent_error_close = 1
-let php_parent_error_open = 1
-
-"clear insert mode
+" insertモードから抜ける
 inoremap <silent> jj <ESC>
-"inoremap <silent> <C-j> j
+inoremap <silent> <C-j> j
 "inoremap <silent> kk <ESC>
 "inoremap <silent> <C-k> k
 
-"top and end key
-nnoremap 0 $
-nnoremap 1 0
+" 行頭・行末移動方向をキーの相対位置にあわせる
+nnoremap 0 $ 
+nnoremap 1 0 
 
-"set cursor key for insertmode
+" 挿入モードでのカーソル移動
 inoremap <C-j> <Down>
 inoremap <C-k> <Up>
 inoremap <C-h> <Left>
 inoremap <C-l> <Right>
-inoremap <C-e> <S-Right>
-inoremap <C-b> <S-Left>
 
-"set char
-inoremap { {}<Left>
-inoremap [ []<Left>
-inoremap ( ()<Left>
-inoremap " ""<Left>
-inoremap ' ''<Left>
-inoremap < <><Left>
+"括弧とクォートを自動補完
+inoremap { {}<LEFT>
+inoremap [ []<LEFT>
+inoremap ( ()<LEFT>
+inoremap " ""<LEFT>
+inoremap ' ''<LEFT>
 
-"set ignorecase
-"set list
-"set listchars=tab:>-,trail:-,nbsp:%,extends:>,precedes:<
-"function! SOLSpaceHilight()
-"    syntax match SOLSpace "^\s\+" display containedin=ALL
-"    highlight SOLSpace term=underline ctermbg=LightGray
-"endf
+"カラースキーマの設定
+autocmd ColorScheme * highlight Visual term=reverse cterm=reverse ctermbg=250 guibg=#cccccc
+autocmd ColorScheme * highlight LineNr ctermfg=231 guifg=#cccccc
+autocmd ColorScheme * highlight Comment ctermfg=9 guifg=#cccc66
+":colorscheme hybrid
+":colorscheme molokai
+:colorscheme jellybeans
+
+:set nobackup
