@@ -5,7 +5,7 @@ filetype plugin indent on
 filetype indent on
 syntax on
 set foldmethod=syntax
-set foldlevel=100
+set foldlevel=0
 set t_Co=256
 "行番号を非表示
 set number
