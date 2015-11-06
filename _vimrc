@@ -5,7 +5,7 @@ filetype plugin indent on
 filetype indent on
 syntax on
 set foldmethod=syntax
-set foldlevel=100
+set foldlevel=0
 set t_Co=256
 "行番号を非表示
 set number
@@ -17,7 +17,21 @@ set showcmd
 set title
 "常にステータス行を表示
 set laststatus=2
+" neobundle 設定
+set nocompatible
+filetype plugin indent off
 
+if has('vim_starting')
+    set runtimepath+=~/.vim/bundle/neobundle.vim
+    call neobundle#begin(expand('~/.vim/bundle'))
+endif
+
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+" emmet-vim (zen-codingみたいなもの)設定
+NeoBundle 'mattn/emmet-vim'
+
+filetype plugin indent on
 "ルーラーを表示
 set ruler
 set ignorecase
@@ -39,10 +53,14 @@ set smarttab
 "タブを空白に置き換える
 set expandtab
 set tabstop=4
-set softtabstop=4
+set softtabstop=0
 set shiftwidth=4
 set backspace=indent,eol,start
 set wildmenu wildmode=list:longest,full
+
+" タブ、空白、改行の可視化
+set list
+set listchars=tab:>-,trail:-,eol:↲,extends:>,precedes:<,nbsp:%
 
 " insertモードから抜ける
 inoremap <silent> jj <ESC>
