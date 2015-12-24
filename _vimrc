@@ -1,6 +1,19 @@
 set nocompatible
 filetype off
 
+if has('vim_starting')
+    set runtimepath+=~/.vim/bundle/neobundle.vim/
+    call neobundle#begin(expand('~/.vim/bundle/'))
+endif
+
+NeoBundleFetch 'Shougo/neobundle.vim'
+NeoBundle 'git://github.com/kmnk/vim-unite-giti.git'
+
+" emmet-vim (zen-codingみたいなもの)設定
+NeoBundle 'mattn/emmet-vim'
+
+call neobundle#end()
+
 filetype plugin indent on
 filetype indent on
 syntax on
@@ -19,23 +32,9 @@ set title
 set laststatus=2
 " neobundle 設定
 set nocompatible
-filetype plugin indent off
-
-if has('vim_starting')
-    set runtimepath+=~/.vim/bundle/neobundle.vim
-    call neobundle#begin(expand('~/.vim/bundle'))
-endif
-
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-" emmet-vim (zen-codingみたいなもの)設定
-NeoBundle 'mattn/emmet-vim'
-
-filetype plugin indent on
 "ルーラーを表示
 set ruler
 set ignorecase
-
 "検索に大文字を含んでいたら大小区別
 set smartcase
 "検索時にヒット部位の色を変更
@@ -43,7 +42,6 @@ set hlsearch
 "検索時にインクリメンタルサーチを行う
 set incsearch
 set showmode
-
 "コマンドラインの履歴の保存数
 set history=256
 "インデント
