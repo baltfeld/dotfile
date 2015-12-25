@@ -1,5 +1,6 @@
 emmet-vim
 neobundle.vim
 unite.vim
+vim-fugitiv
 vim-unite-giti
 vimproc

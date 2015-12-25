@@ -19,3 +19,6 @@
 [submodule "_vim/bundle/vimproc.vim"]
 	path = _vim/bundle/vimproc.vim
 	url = https://github.com/Shougo/vimproc.vim.git
+[submodule "_vim/bundle/vim-fugitive"]
+	path = _vim/bundle/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
