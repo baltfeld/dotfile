@@ -1,0 +1,21 @@
+[submodule "_vim/bundle/emmet.vim"]
+	path = _vim/bundle/emmet.vim
+	url = https://github.com/mattn/emmet-vim.git
+[submodule "_vim/bundle/_vim/bundle/emmet-vim"]
+	path = _vim/bundle/_vim/bundle/emmet-vim
+	url = https://github.com/mattn/emmet-vim.git
+[submodule "_vim/bundle/emmet-vim"]
+	path = _vim/bundle/emmet-vim
+	url = https://github.com/mattn/emmet-vim.git
+[submodule "_vim/bundle/neobundle.vim"]
+	path = _vim/bundle/neobundle.vim
+	url = https://github.com/Shougo/neobundle.vim.git
+[submodule "_vim/bundle/unite.vim"]
+	path = _vim/bundle/unite.vim
+	url = https://github.com/Shougo/unite.vim.git
+[submodule "_vim/bundle/vim-unite-giti"]
+	path = _vim/bundle/vim-unite-giti
+	url = https://github.com/kmnk/vim-unite-giti.git
+[submodule "_vim/bundle/vimproc.vim"]
+	path = _vim/bundle/vimproc.vim
+	url = https://github.com/Shougo/vimproc.vim.git

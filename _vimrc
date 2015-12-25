@@ -9,7 +9,7 @@ endif
 NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vimproc'
-NeoBundle 'git://github.com/kmnk/vim-unite-giti.git'
+NeoBundle 'https://github.com/kmnk/vim-unite-giti.git'
 
 " emmet-vim (zen-codingみたいなもの)設定
 NeoBundle 'mattn/emmet-vim'

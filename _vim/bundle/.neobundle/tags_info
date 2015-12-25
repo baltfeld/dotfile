@@ -1,2 +1,5 @@
 emmet-vim
 neobundle.vim
+unite.vim
+vim-unite-giti
+vimproc
