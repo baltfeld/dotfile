@@ -10,7 +10,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vimproc'
 NeoBundle 'https://github.com/kmnk/vim-unite-giti.git'
-NeoBundle 'tpope/vim-fugitiv'
+NeoBundle 'tpope/vim-fugitive'
 
 " emmet-vim (zen-codingみたいなもの)設定
 NeoBundle 'mattn/emmet-vim'
