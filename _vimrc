@@ -11,6 +11,7 @@ NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vimproc'
 NeoBundle 'https://github.com/kmnk/vim-unite-giti.git'
 NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'tpope/vim-surround'
 
 " emmet-vim (zen-codingみたいなもの)設定
 NeoBundle 'mattn/emmet-vim'
@@ -20,7 +21,8 @@ call neobundle#end()
 filetype plugin indent on
 filetype indent on
 syntax on
-set foldmethod=syntax
+"set foldmethod=syntax
+set foldmethod=marker
 set foldlevel=0
 set t_Co=256
 "行番号を非表示
@@ -94,3 +96,7 @@ colorscheme jellybeans
 
 set nobackup
 set mouse=c
+
+call plug#begin()
+Plug 'mechatroner/rainbow_csv'
+call plug#end()
